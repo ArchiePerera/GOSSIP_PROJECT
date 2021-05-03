@@ -4,6 +4,7 @@ require_relative 'gossip'
 
 
 class ApplicationController < Sinatra::Base
+
   get "/" do
     erb :index, locals: {gossips: Gossip.all}
   end
@@ -17,5 +18,11 @@ class ApplicationController < Sinatra::Base
     redirect '/'
   end
 
+  get "/gossips/:id" do
+		@id = params[:id].to_i
+    @gossip = Gossip.find(@id)
+    erb :gossips
+
+	end 
 
 end

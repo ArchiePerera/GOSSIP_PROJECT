@@ -1,19 +1,42 @@
 <html>
-  <head>
-    <title>The Gossip Project</title>
-  </head>
-  <body>
-    <h1>Mon super site de gossip, depuis le dossier views !</h1>
-    <h2>A bientôt pour la liste des potins</h2>
-    <p>Je suis sûr que ça va te plaire</p>
-    <a href="/gossips/new/">le texte du lien</a>
 
-    <%gossips.each do |gossip|%>
-      <p>
-        <%= gossip.author %>
-        <%= gossip.content%>
-      </p>
-    <%end%>
+  <head>
+
+    <title>The Gossip Project</title>
+
+  </head>
+
+  <body>
+
+    <div style = "margin: 0 auto; text-align: center; display: flex; flex-direction: column;">
+
+  <header>
+
+    <h1 style = "font-family: verdana;">THE GOSS<span style ="color: red;">I</span>P WEBS<span style ="color: red;">I</span>TE</h1>
+
+  </header>
+
+    <h2 style = "font-style: italic;">Secrets honteux à THP</h2>
+
+
+      <blocquote>Ayez le pouvoir sur vos petits camarades</blocquote>
+
+        <a href="/gossips/new/">DÉNONCER UN AMI</a>
+
+    <article style = "width: 450px; margin: 50px auto; padding: 0 20px; border-radius: 20px; background-color: #d3d3d3; box-shadow: 3px 3px 3px 5px rgba(10, 60, 255, .1);">     
+       <%gossips.each_with_index do |gossip, id|%>      
+         <p style = "font-weight: bold;">
+            <%= gossip.author %>
+         </p>
+         <p style = "font-style: italic;">
+         <%= gossip.content%>
+         </p>
+          <a href = '/gossips/<%=id+1%>'>Lire le potin</a>
+         </p>
+         <%end%>
+    </article>
+
+   </div>
 
   </body>
 </html>

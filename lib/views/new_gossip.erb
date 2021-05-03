@@ -1,14 +1,39 @@
 <html>
+
   <head>
+
     <title>Créer un potin</title>
+
+      <link href="style.css" rel="stylesheet" type="text/css" />
+
   </head>
+
   <body>
-    <h1>Crée un potin !</h1>
-    <p>Balance ton potin via le formulaire ci-dessous</p>
-    <form action='/gossips/new/' method='POST'>
-      Saisis ici ton nom :  <input type='text' name='gossip_author' placeholder ='sa mère'/><br/>
-      Balance ton potin : <input type='text' name='gossip_content'/><br/>
-      <input type='submit'/>
-    </form>
+
+    <div style = "margin: 0 auto; text-align: center; display: flex; flex-direction: column;">
+
+      <h1 style = "font-family: verdana;">Crée un pot<span style ="color: red;">i</span>n !</h1>
+
+        <p style = "font-style: italic;">Balance ton potin via le formulaire ci-dessous</p>
+
+          <fieldset style = "width: 450px; margin: 50px auto; padding: 0 20px; border-radius: 20px; background-color: #d3d3d3; box-shadow: 3px 3px 3px 5px rgba(10, 60, 255, .1);">
+
+            <form action='/gossips/new/' method='POST'>
+
+              Saisis ici ton nom :  <input style = "border-radius: 3px; margin-top: 5px; " type='text' name='gossip_author' placeholder ='ton nom de grosse balance'/><br/>
+
+              Balance ton potin : <input style = "border-radius: 3px; margin-top: 5px; " type='text' name='gossip_content' placeholder = 'Crache ton venin'/><br/>
+
+                <input style = "border-radius: 3px; margin-top: 10px; " type='submit' value='POUCAVE'/>
+
+            </form>
+
+        </fieldset>
+
+      <a href="/">Retour à la page d'accueil</a>
+
+    </div>
+
   </body>
+
 </html>

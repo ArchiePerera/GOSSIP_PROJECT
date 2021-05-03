@@ -1,0 +1,38 @@
+<html>
+
+    <head>
+
+        <title>Consulte un potin</title>
+
+    </head>
+
+    <body>
+
+      <div style = "margin: 0 auto; text-align: center; display: flex; flex-direction: column;">
+
+    <header>
+
+        <h1 style = "font-family: verdana;">PAGE POT<span style ="color: red;">I</span>N</h1>
+
+    </header>
+
+        <h4 style = "font-style: italic;">Voici la page du potin n°<%=@id%></h4>
+
+            <article style = "width: 450px; margin: 50px auto; padding: 0 20px; border-radius: 20px; background-color: #d3d3d3; box-shadow: 3px 3px 3px 5px rgba(10, 60, 255, .1);">
+                <p>
+                     <span style = "font-weight: bold;">Son auteur</span> : <%=@gossip.author%><br/>
+                </p>
+                <p>
+                    <span style = "font-weight: bold;">Le contenu du potin</span> : <br><%=@gossip.content%><br/>
+                </p>
+            </article>
+        
+        <p style = "width: 450px; margin: 50px auto;">
+
+                <a href="/">Retour à la page d'acceuil</a>
+
+        </div>
+
+    </body>
+
+</html>
