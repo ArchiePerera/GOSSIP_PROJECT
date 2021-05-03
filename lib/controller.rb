@@ -17,14 +17,5 @@ class ApplicationController < Sinatra::Base
     redirect '/'
   end
 
-  get '/hello/:name' do
-    "Hello #{params['name']}!"
-  end
 
 end
-
-
-
-
-
-
